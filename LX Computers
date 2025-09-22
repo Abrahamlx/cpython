@@ -1,0 +1,31 @@
+import tkinter as tk
+
+def show_about():
+    output_label.config(text="LX Computers provides ICT solutions:\nSales, Repairs, Training, and Software Development.")
+
+def show_services():
+    output_label.config(text="Our Services:\n💻 Sales & Repairs\n🖥 Software Development\n💳 E-Payment\n📡 Training\n🔧 Design\n⚙ ICT Support")
+
+def show_contact():
+    output_label.config(text="Contact Us:\n📍 36 Katsina Road, Sabuwa A, Katsina\n📞 +2349067332776\n✉️ abrahamlx111@gmail.com")
+
+root = tk.Tk()
+root.title("LX Computers and Tech")
+root.geometry("400x400")
+
+title_label = tk.Label(root, text="LX Computers and Tech", font=("Arial", 18, "bold"))
+title_label.pack(pady=10)
+
+btn_about = tk.Button(root, text="About Us", command=show_about)
+btn_about.pack(pady=5)
+
+btn_services = tk.Button(root, text="Services", command=show_services)
+btn_services.pack(pady=5)
+
+btn_contact = tk.Button(root, text="Contact Us", command=show_contact)
+btn_contact.pack(pady=5)
+
+output_label = tk.Label(root, text="", font=("Arial", 12), justify="left")
+output_label.pack(pady=20)
+
+root.mainloop()
